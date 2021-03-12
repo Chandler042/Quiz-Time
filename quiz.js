@@ -48,4 +48,40 @@ const questions = [
     },
 ];
 
+//adding elements to a list over time 
+const viewHighscores = document.getElementById("view-highscores")
+const startButton = document.getElementById("start-button")
+const nextButton = document.getElementById("next-button")
+const closeButton = document.getElementById("close-Button")
+const gameOver = document.getElementById("game-over")
+const scoreboardList = document.getElementById("scoreboard-list")
+const nameSubmit = document.getElementById("name-sumbit")
+
+viewHighscores.addEventListener("click", viewHighscore)
+startButton.addEventListener("click", startQuiz)
+nextButton.addEventListener("click", () => {
+    currentQuestion++;
+    nextQuestion();
+});
+closeButton.addEventListener("click", () => {
+    gameOver.classList.remove("board-active");
+});
+scoreSubmit.addEventListener("click", () => {
+    gameOver.classList.remove("board-active");
+    scoreboardList.classList.add("board-active");
+    submitScore();
+});
+nameSubmit.addEventListener('keypress', function () {
+    if () {
+        gameOver.classList.remove("board-active");
+        scoreboardList.classList.add("board-active");
+        submitScore();
+    }
+});
+clearButton.addEventListener("click", () => {
+    localStorage.clear();
+    location.reload();
+});
+
+
 
