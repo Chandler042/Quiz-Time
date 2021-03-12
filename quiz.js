@@ -71,6 +71,7 @@ scoreSubmit.addEventListener("click", () => {
     scoreboardList.classList.add("board-active");
     submitScore();
 });
+// trying to submit names pulled from a vid, but still not exactly know what it does yet
 nameSubmit.addEventListener('keypress', function () {
     if () {
         gameOver.classList.remove("board-active");
