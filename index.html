@@ -3,26 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Time quiz" content=""/>
     <link rel="stylesheet" href="./style.css">
     <title>Quiz</title>
 </head>
 <body>
-    <header>
-        <h1>View Highscores</h1>
-        <nav>
-            <li>
-                Time: <text id="time001">90</text>
-            </li>
-        </nav>
-    </header>
-
-    <section id="box" class="box">
-        <h2>Coding Quiz Challenge</h2>
-        <p>Try and complete the quiz and receive the highest score in a set amount of time. If you get the question correct the time</p>
-        <p>will not get deducted, but if answered wrong 10 seconds will be taken  off the timer. The timer will begin at 90 seconds and 
-        <p>when it hits zero you will record your score.</p>
-    </section>
-    <footer><button>Start</button></footer>   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-edit" href="#">Coding Quiz</div>
+        <button>
+            class="toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-icon"></span>
+        <div class="navbar-collapse" id="navbartxt">
+            <ul class="navnav">
+                <li class="nav-item">
+                    <a class="nav-lnk" id="view-highscore">View Highscore</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- //begining container -->
+    <div class="container" id="main-container">
+        <div id="card-container">
+            <div id="card-body">
+                <span id="target-me"><h2>Coding Quiz Challenge</h2></span>
+                <div id="first-slide">
+                    <p>
+                        Try and complete the quiz and receive the highest score in a set amount of time. If you get the question correct the time
+                    </p>
+                    <p>
+                        will not get deducted, but if answered wrong 10 seconds will be taken  off the timer. The timer will begin at 90 seconds and
+                    </p>
+                    <p>
+                        when it hits zero you will record your score.
+                    </p>
+                </div>
+                <div id="question-slides">
+                    <div id="question-prompt">
+                        <!-- questions should come up -->
+                    </div>
+                    <div id="answer-buttons" class="btn-stack">
+                        <!-- answer buttons appear -->
+                    </div>
+                </div>
+                <div id="footer-card">
+                    <button class="btn btn-prim btn-lg" id="start-button">
+                        Start Quiz
+                    </button>
+                    <button class="btn btn-outline btn-lg hide" id="next-button">
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./quiz.js" type="text/javascript"></script>
 </body>
 </html>
