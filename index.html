@@ -1,74 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Time quiz" content=""/>
-    <link rel="stylesheet" href="./style.css">
-    <title>Quiz</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="navbar-edit" href="#">Coding Quiz</div>
-        <button>
-            <span class="navbar-icon"></span>
-            <div class="navbar-collapse" id="navbartxt">
-                <ul class="navnav">
-                 <li class="nav-item">
-                    <a class="nav-lnk" id="view-highscore">View Highscore</a>
-                 </li>
-                </ul>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Code Quiz!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assests/css/style.css">
+    </head>
+    <body>
+        <section id="quizStart" class="show">
+            <button id="startButton">Start Quiz</button>
+        </section>
+        <section id="quizActive" class="hide">
+            <h2>Time Remaining: <span id="timer"></span></h2>
+            <form>
+                <h3 id="questionText"></h3>
+                <div id="optionList">
+                    <input type="radio" id="option1" name="option" value="">
+                    <label for="option1" id="option1Label"></label>
+                
+                
+                    <input type="radio" id="option2" name="option" value="">
+                    <label for="option2" id="option2Label"></label>
+                
+                
+                    <input type="radio" id="option3" name="option" value="">
+                    <label for="option3" id="option3Label"></label>
+                
+                
+                    <input type="radio" id="option4" name="option" value="">
+                    <label for="option4" id="option4Label"></label>
+                
+                </div>
+                <button type="button" id="prevButton">Previous Question</button>
+                <button type="button" id="nextButton">Next Question -></button>
+                <button type="button" id="submitButton">Submit Responses</button>
+            </form>
+        </section>
+        <section id="quizResults" class="hide">
+            <div id="displayRecentResults">
+                <p>placeholder paragraph</p>
             </div>
-        </button>
-    </nav>
-    <!-- //begining container -->
-    <div class="container" id="main-container">
-        <div id="card-container">
-            <div id="card-body">
-                <span id="target-me"><h2>Coding Quiz Challenge</h2></span>
-                <div id="first-slide">
-                    <p>
-                        Try and complete the quiz and receive the highest score in a set amount of time. If you get the question correct the time
-                    </p>
-                    <p>
-                        will not get deducted, but if answered wrong 10 seconds will be taken  off the timer. The timer will begin at 90 seconds and
-                    </p>
-                    <p>
-                        when it hits zero you will record your score.
-                    </p>
-                </div>
-                <div id="question-slides">
-                    <div id="question-prompt">
-                        <!-- questions should come up -->
-                    </div>
-                    <div id="answer-buttons" class="btn-stack">
-                        <!-- answer buttons appear -->
-                    </div>
-                </div>
-                <div id="footer-card">
-                    <button class="btn btn-prim btn-lg" id="start-button">
-                        Start Quiz
-                    </button>
-                    <button class="btn btn-outline btn-lg hide" id="next-button">
-                        Next Question
-                    </button>
-                </div>
-                <div class="gameover" id="game-over-bg">
-                    <div id="game-over">
-                        <h1>Quiz is Complete</h1>
-                        <p>
-                            You got <span id="correct"></span> out of
-                            <span id="total-questions"></span> questions correct <br />with
-                            <span id="time-remainder"></span> remaining.
-                        </p>
-                        <label for="name">Enter your name on the Highscore list:</label>
-                        <input type="text" id="input-name" name="name" />
-                        <button class="btn btn-secondary submit-btn" id="submit">Sumbit</button>
-                    </div>
-                </div>
+            <div id="highScores">
+
             </div>
-        </div>
-    </div>
-    <script src="./quiz.js" type="text/javascript"></script>
-</body>
+            
+            
+        </section>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src=""></script>
+        <script src=""></script>
+        <script src=""></script>
+    </body>
 </html>
