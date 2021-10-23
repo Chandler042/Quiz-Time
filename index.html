@@ -11,22 +11,15 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="navbar-edit" href="#">Coding Quiz</div>
         <button>
-            class="toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
             <span class="navbar-icon"></span>
-        <div class="navbar-collapse" id="navbartxt">
-            <ul class="navnav">
-                <li class="nav-item">
+            <div class="navbar-collapse" id="navbartxt">
+                <ul class="navnav">
+                 <li class="nav-item">
                     <a class="nav-lnk" id="view-highscore">View Highscore</a>
-                </li>
-            </ul>
-        </div>
+                 </li>
+                </ul>
+            </div>
+        </button>
     </nav>
     <!-- //begining container -->
     <div class="container" id="main-container">
@@ -59,6 +52,19 @@
                     <button class="btn btn-outline btn-lg hide" id="next-button">
                         Next Question
                     </button>
+                </div>
+                <div class="gameover" id="game-over-bg">
+                    <div id="game-over">
+                        <h1>Quiz is Complete</h1>
+                        <p>
+                            You got <span id="correct"></span> out of
+                            <span id="total-questions"></span> questions correct <br />with
+                            <span id="time-remainder"></span> remaining.
+                        </p>
+                        <label for="name">Enter your name on the Highscore list:</label>
+                        <input type="text" id="input-name" name="name" />
+                        <button class="btn btn-secondary submit-btn" id="submit">Sumbit</button>
+                    </div>
                 </div>
             </div>
         </div>
